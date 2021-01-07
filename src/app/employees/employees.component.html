@@ -28,7 +28,20 @@
       <td><button [disabled]="form.invalid" type="submit" (click)="addEmployee()" class="btn btn-success" style="width: 70px">Add</button></td>
     </tr>
 
-
     </tbody>
   </table>
+
+  <div *ngIf="form.controls['id'].invalid && form.controls['id'].touched"
+       class="alert alert-danger"
+       role="alert">Id Error: required and only numbers</div>
+  <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched"
+       class="alert alert-danger"
+       role="alert">Name Error: required and only letters</div>
+  <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched"
+       class="alert alert-danger"
+       role="alert">Email Error: required and must be email type</div>
+  <div *ngIf="form.controls['avatar'].invalid && form.controls['avatar'].touched"
+       class="alert alert-danger"
+       role="alert">Avatar Error: required</div>
+
 </div>
