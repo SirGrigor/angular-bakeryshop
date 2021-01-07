@@ -5,3 +5,7 @@ body {
 }
 
 /*TODO: Set the font weight of the first table column to bold*/
+
+tbody tr td:first-child {
+  font-weight: bold;
+}

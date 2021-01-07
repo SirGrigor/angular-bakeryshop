@@ -48,7 +48,6 @@ export class EmployeesComponent implements OnInit {
 
   addEmployee(): void {
     const formValue = this.form.value;
-    console.log(this.form.value);
     this.employees.push(new Employee(
       formValue.id,
       formValue.name,
